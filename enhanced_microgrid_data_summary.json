@@ -1,0 +1,95 @@
+{
+  "dataset_info": {
+    "total_records": 576,
+    "time_range": {
+      "start": "2025-09-24T06:00:00",
+      "end": "2025-09-26T05:55:00"
+    },
+    "data_quality": {
+      "missing_values": {
+        "timestamp": 0,
+        "solar_generation": 0,
+        "storage_level": 0,
+        "battery_temperature": 0,
+        "solar_panel_temp": 0,
+        "soc": 0,
+        "voltage": 0,
+        "consumption_load": 0,
+        "alert_status": 0,
+        "predicted_generation": 0,
+        "predicted_load": 0,
+        "alert_type": 0
+      },
+      "data_types": {
+        "timestamp": "object",
+        "solar_generation": "float64",
+        "storage_level": "float64",
+        "battery_temperature": "float64",
+        "solar_panel_temp": "float64",
+        "soc": "float64",
+        "voltage": "float64",
+        "consumption_load": "float64",
+        "alert_status": "object",
+        "predicted_generation": "float64",
+        "predicted_load": "float64",
+        "alert_type": "object"
+      }
+    }
+  },
+  "alert_analysis": {
+    "alert_distribution": {
+      "healthy": 313,
+      "critical": 172,
+      "warning": 91
+    },
+    "alert_types": {
+      "none": 313,
+      "low_soc,voltage_drop": 148,
+      "low_soc": 97,
+      "solar_temp": 9,
+      "voltage_drop": 5,
+      "solar_temp,low_soc": 3,
+      "solar_temp,voltage_drop": 1
+    },
+    "critical_events": 172,
+    "warning_events": 91
+  },
+  "system_metrics": {
+    "solar_generation": {
+      "max": 990.9,
+      "min": 0.0,
+      "avg": 267.38350694444443,
+      "zero_generation_hours": 152
+    },
+    "battery_performance": {
+      "max_soc": 99.1,
+      "min_soc": 2.0,
+      "avg_soc": 39.03489583333333,
+      "low_soc_events": 247
+    },
+    "temperature_analysis": {
+      "max_battery_temp": 78.3,
+      "max_solar_temp": 104.8,
+      "overheating_events": 0
+    },
+    "voltage_stability": {
+      "max_voltage": 251.7,
+      "min_voltage": 160.0,
+      "voltage_dip_events": 154
+    }
+  },
+  "edge_scenarios": {
+    "high_temp_events": 0,
+    "critical_soc_events": 169,
+    "severe_voltage_drops": 15,
+    "consumption_spikes": 14
+  },
+  "ai_predictions": {
+    "generation_forecast_avg": 300.4975694444445,
+    "load_forecast_avg": 343.2347222222222,
+    "prediction_variance": {
+      "generation": 127895.84868973418,
+      "load": 22242.945157487917
+    }
+  }
+}

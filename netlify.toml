@@ -1,0 +1,13 @@
+[build]
+  command = "cd frontend && npm install && npm run build"
+  publish = "frontend/build"
+
+[build.environment]
+  NODE_VERSION = "18.0.0"
+  NPM_VERSION = "9.0.0"
+  REACT_APP_API_URL = "https://your-render-backend-url.onrender.com"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

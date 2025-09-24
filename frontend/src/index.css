@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8fafc;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.metric-card {
+  @apply bg-white rounded-lg shadow-md p-6 border border-gray-200;
+}
+
+.alert-banner {
+  @apply px-4 py-3 rounded-md mb-4 border-l-4;
+}
+
+.alert-critical {
+  @apply bg-red-50 border-red-500 text-red-700;
+}
+
+.alert-high {
+  @apply bg-orange-50 border-orange-500 text-orange-700;
+}
+
+.alert-medium {
+  @apply bg-yellow-50 border-yellow-500 text-yellow-700;
+}
+
+.alert-low {
+  @apply bg-blue-50 border-blue-500 text-blue-700;
+}
+
+.status-healthy {
+  @apply text-green-600 bg-green-100;
+}
+
+.status-warning {
+  @apply text-yellow-600 bg-yellow-100;
+}
+
+.status-caution {
+  @apply text-orange-600 bg-orange-100;
+}
+
+.status-critical {
+  @apply text-red-600 bg-red-100;
+}
