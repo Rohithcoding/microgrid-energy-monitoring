@@ -2,13 +2,13 @@ services:
   - type: web
     name: microgrid-backend
     env: python
+    python:
+      version: "3.10.13"
     buildCommand: |
-      chmod +x ./setup.sh
-      ./setup.sh
+      pip install --upgrade pip && \
+      pip install -r requirements.txt
     startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
     envVars:
-      - key: PYTHON_VERSION
-        value: 3.10.13
       - key: PORT
         value: 10000
       - key: SECRET_KEY
@@ -18,5 +18,15 @@ services:
       - key: ACCESS_TOKEN_EXPIRE_MINUTES
         value: "30"
       - key: DATABASE_URL
-        value: "sqlite:///tmp/sql_app.db"
+        fromDatabase:
+          name: microgrid-db
+          property: connectionString
+      - key: ENVIRONMENT
+        value: "production"
+    plan: free
+
+databases:
+  - name: microgrid-db
+    databaseName: microgrid
+    user: microgrid
     plan: free
