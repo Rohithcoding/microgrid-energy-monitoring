@@ -28,6 +28,13 @@ const Navigation = ({ currentView, setCurrentView }) => {
       roles: ['operator', 'admin']
     },
     {
+      id: 'comprehensive',
+      name: 'Comprehensive',
+      icon: ChartBarIcon,
+      description: 'Advanced monitoring and analytics',
+      roles: ['operator', 'admin']
+    },
+    {
       id: 'analytics',
       name: 'Analytics',
       icon: ChartBarIcon,
