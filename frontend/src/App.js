@@ -4,6 +4,7 @@ import useAuthStore from './store/authStore';
 import LoginForm from './components/LoginForm';
 import Navigation from './components/Navigation';
 import Dashboard from './components/Dashboard';
+import ComprehensiveDashboard from './components/ComprehensiveDashboard';
 import AIInsights from './components/AIInsights';
 import AlertsPage from './components/AlertsPage';
 import AlertsPageDebug from './components/AlertsPageDebug';
@@ -33,6 +34,8 @@ function App() {
     switch (currentView) {
       case 'dashboard':
         return <Dashboard onNavigateToAlerts={() => setCurrentView('alerts')} />;
+      case 'comprehensive':
+        return <ComprehensiveDashboard onNavigateToAlerts={() => setCurrentView('alerts')} />;
       case 'analytics':
         return (
           <div className="p-6">
